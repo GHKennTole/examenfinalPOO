@@ -1,0 +1,372 @@
+/* FUENTE BEBAS NEUE */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    background-image: url('Imagenes/Fondos/Fondo_light.jpg');
+    background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
+    background-image: url('Imagenes//Fondos/Fondo_dark.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end; /* Alinea los elementos del header a la derecha */
+    align-items: center;
+}
+
+body.dark-mode header {
+    background-color: transparent;
+}
+
+:placeholder-shown {
+    font-style: oblique;
+    font-weight: bold;
+}
+
+/* INICIO DE BOTON DARK MODE */
+.toggleContainer { /* CONTENEDOR DEL BOTON */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end; /* Alinea los elementos del contenedor al final */
+}
+
+.toggle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.toggle + .switch { /* MARCO */
+    position: relative;
+    display: block;
+    background: lightgray;
+    width: 85px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: 0.5s;
+    border: 2px solid black;
+    margin-top: 1%;
+}
+
+.toggle + .switch:before { /* SWITCH */
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #333;
+    border-radius: 50%;
+    margin: 0px 2px;
+    left: 0%;
+    transition: 1s;
+}
+
+.toggle:checked + .switch { /* MARCO ACCIONADO */
+    background: #333;
+    border: 2px solid white;
+}
+
+.toggle:checked + .switch:before { /* SWITCH ACCIONADO */
+    background: #f4f4f4;
+    left: 100%;
+    transform: translate(calc(-100% - 2px), -50%);
+}
+
+#mode-indicator {
+    font-family: "Bebas Neue", sans-serif;
+    margin-top: 5px;
+    font-size: 15px;
+    color: #333;
+    background-color: #f4f4f4;
+    border: 2px solid #333; 
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    display: inline-block; 
+}
+
+body.dark-mode #mode-indicator {
+    color: #f4f4f4;
+    background-color: #333; 
+    border: 2px solid #f4f4f4; 
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+}
+
+#categoria-btn {
+    padding: 5px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.menu {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.menu li:hover {
+    background-color: #5f5e5e;
+}
+
+/* FIN DE BOTON DARK MODE */
+
+.container {
+    text-align: center;
+    background-color: rgb(160, 214, 250);
+    padding: 20px;
+    border: black 2px solid;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s, color 0.5s;
+}
+
+body.dark-mode .container {
+    background-color: #444;
+    border: rgb(255, 255, 255) 2px solid;
+    color: #f4f4f4;
+}
+
+h1 {
+    font-family: "Bebas Neue", sans-serif;
+    color: #333;
+}
+
+body.dark-mode h1 {
+    color: #f4f4f4;
+    text-shadow: -2px 0 black, 0 2px black,
+                2px 0 black, 0 -2px black;
+}
+
+h2, h3, label {
+    font-weight: 1000;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+}
+
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode label {
+    color: #f4f4f4;
+}
+
+input {
+    margin-bottom: 10px;
+    margin-top: 5px;
+    border: 2px solid black;
+    border-radius: 100px;
+    padding: 5px;
+    width: 200px;
+}
+
+.boton-container {
+    margin-top: 20px;
+}
+
+button { /* BOTON DE AGREGAR */
+    padding: 5px 13px;
+    background-color: #80db8f;
+    color: rgb(3, 3, 3);
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 1000;
+}
+
+button:hover {
+    background-color: #3ab83a;
+}
+
+body.dark-mode button { /* BOTON DE AGREGAR */
+    background-color: #89aae7;
+}
+
+body.dark-mode button:hover { /* BOTON DE AGREGAR */
+    background-color: #473ab8;
+}
+
+.boton-eliminar, body.dark-mode .boton-eliminar{
+    background-color: transparent;
+    color: transparent;
+    border: transparent;
+}   
+
+.boton-eliminar:hover , body.dark-mode .boton-eliminar:hover {
+    background-color: #CC0000;
+}
+
+.boton-modificar, body.dark-mode .boton-modificar {
+    background-color: transparent;  
+    color: transparent;
+    border: transparent;
+}
+
+.boton-modificar:hover, body.dark-mode .boton-modificar:hover, button.modificar, body.dark-mode button.modificar {
+    background-color: #ffc107;
+}
+
+button.modificar:hover, body.dark-mode button.modificar:hover {
+    background-color: #ffee04;
+}
+
+.lista-container {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 2px dashed black;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+body.dark-mode .lista-container {
+    background-color: #444;
+    border: 2px dashed white;
+    color: #f4f4f4;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    margin-bottom: 0px;
+    padding: 5px;
+    border-top: 1px solid rgb(0, 0, 0);
+}
+
+body.dark-mode li {
+    background-color: #554c4c;
+    border-top: 1px solid rgb(0, 0, 0);
+    color: #ffffff;
+}
+
+li span {
+    flex: 1;
+    text-align: center;
+}
+
+li button {
+    margin-left: 5px;
+}
+
+/* Icononos de botones */
+li button img {
+    width: 25px; 
+    height: 25px; 
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    body {
+        margin: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2, h3, label {
+        font-size: 1.2em;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    button {
+        padding: 5px 10px;
+        font-size: 1em;
+    }
+
+    .lista-container {
+        max-height: 150px;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    li span {
+        text-align: left;
+        width: 100%;
+    }
+
+    li button {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2, h3, label {
+        font-size: 1em;
+    }
+
+    button {
+        padding: 5px 8px;
+        font-size: 0.8em;
+    }
+
+    .lista-container {
+        max-height: 100px;
+    }
+}
