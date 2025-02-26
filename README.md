@@ -14,4 +14,4 @@
 ## LO QUE CONTIENE EL REPOSITORIO
 
 ### DESPLIEGUE
-  - LINK:
+  - LINK: https://ghkenntole.github.io/examenfinalPOO/
