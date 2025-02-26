@@ -6,6 +6,8 @@
 
 ## FUNCIONALIDAD
 **DESCRIPCION**
+COD1
+
 
 **FLUJO**
 
