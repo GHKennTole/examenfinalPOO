@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COD5 Herencia y Polimorfismo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="pantalla-bienvenida" class="pantalla-bienvenida">
+        <h1>COD5 MINI-GAME</h1>
+        <h2>De click en cualquier parte de la pantalla para iniciar</h2>
+    </div>
+
+    <div id="pantalla-seleccion" class="pantalla-seleccion" style="display: none;">
+        <h1>Selecciona tu Héroe</h1>
+        <div class="heroes">
+            <button id="guerrero-btn">Guerrero</button>
+            <button id="mago-btn">Mago</button>
+            <button id="arquero-btn">Arquero</button>
+        </div>
+        <div class="info-hero">
+            <div id="imagen-hero" class="imagen-hero">
+                <!-- Aquí se mostrará la imagen del héroe seleccionado -->
+            </div>
+            <div class="detalles-hero">
+                <div id="descripcion-hero" class="descripcion-hero">
+                    <!-- Aquí se mostrará la descripción del héroe seleccionado -->
+                </div>
+                <div id="estadisticas-hero" class="estadisticas-hero">
+                    <!-- Aquí se mostrarán las estadísticas del héroe seleccionado -->
+                </div>
+            </div>
+        </div>
+        <button id="siguiente-btn">SIGUIENTE</button>
+    </div>
+
+    <div id="pantalla-armas" class="pantalla-armas" style="display: none;">
+        <h1>Selecciona tu Arma</h1>
+        <div class="armas">
+            <!-- Botones de armas se llenarán dinámicamente -->
+        </div>
+        <div class="info-arma">
+            <div id="imagen-arma" class="imagen-arma">
+                <!-- Aquí se mostrará la imagen del arma seleccionada -->
+            </div>
+            <div class="detalles-arma">
+                <div id="descripcion-arma" class="descripcion-arma">
+                    <!-- Aquí se mostrará la descripción del arma seleccionada -->
+                </div>
+                <div id="estadisticas-arma" class="estadisticas-arma">
+                    <!-- Aquí se mostrarán las estadísticas del arma seleccionada -->
+                </div>
+            </div>
+        </div>
+        <div class="botones-navegacion">
+            <button id="retroceder-btn">RETROCEDER</button>
+            <button id="arma-siguiente-btn">SIGUIENTE</button>
+        </div>
+    </div>
+
+    <div id="pantalla-enemigos" class="pantalla-enemigos" style="display: none;">
+        <h1>Selecciona un enemigo</h1>
+        <div class="enemigos">
+            <!-- Botones de enemigos se llenarán dinámicamente -->
+        </div>
+        <div class="info-enemigo">
+            <div id="imagen-enemigo" class="imagen-enemigo">
+                <!-- Aquí se mostrará la imagen del enemigo seleccionado -->
+            </div>
+            <div class="detalles-enemigo">
+                <div id="descripcion-enemigo" class="descripcion-enemigo">
+                    <!-- Aquí se mostrará la descripción del enemigo seleccionado -->
+                </div>
+            </div>
+        </div>
+        <div class="botones-navegacion">
+            <button id="enem-retroceder-btn">RETROCEDER</button>
+            <button id="enem-siguiente-btn">SIGUIENTE</button>
+        </div>
+    </div>
+
+    <div id="pantalla-combate" class="pantalla-combate" style="display: none;">
+        <h1>FIGHT!</h1>
+        <div class="combate">
+            <div class="bloque-izquierdo">
+                <div id="imagen-combate-hero" class="imagen-combate">
+                    <!-- Aquí se mostrará la imagen del héroe seleccionado -->
+                </div>
+                <div id="estadisticas-combate-hero" class="estadisticas-combate-hero">
+                    <!-- Aquí se mostrarán las estadísticas del héroe seleccionado con el bonus del arma -->
+                </div>
+                <div class="acciones-hero">
+                    <button id="atacar-btn">Atacar</button>
+                    <button id="hechizo-btn">Lanzar Hechizo</button>
+                    <button id="curar-btn">Curar</button>
+                    <button id="trascender-btn" disabled>Trascender</button>
+                </div>
+            </div>
+            <div class="bloque-derecho">
+                <div id="imagen-combate-enemigo" class="imagen-combate">
+                    <!-- Aquí se mostrará la imagen del enemigo seleccionado -->
+                </div>
+                <div id="estadisticas-combate-enemigo" class="estadisticas-combate-enemigo">
+                    <!-- Aquí se mostrarán las estadísticas del enemigo seleccionado -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="pantalla-resultado" class="pantalla-resultado" style="display: none;">
+        <h1 id="resultado-combate"></h1>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.pantalla-bienvenida, .pantalla-seleccion, .pantalla-armas, .pantalla-enemigos, .pantalla-combate, .pantalla-resultado {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.pantalla-bienvenida {
+    background-image: url('Imagenes/Fondo/Fondo Bienvenida.gif'); 
+}
+
+.pantalla-resultado {
+    background-image: url('Imagenes/Fondo/Fondo Final.gif'); 
+}
+
+.pantalla-bienvenida h1, .pantalla-seleccion h1, .pantalla-armas h1, .pantalla-enemigos h1, .pantalla-combate h1, .pantalla-resultado h1 {
+    font-family: "Sixtyfour Convergence", sans-serif;
+    font-size: 3em;
+    margin: 0;
+}
+
+.pantalla-bienvenida h2, .pantalla-seleccion h2, .pantalla-armas h2, .pantalla-enemigos h2, .pantalla-combate h2 {
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 1.5em;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.heroes, .armas, .enemigos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.combate {
+    display: flex;
+    justify-content: space-between;
+    width: 50%; /* Reduce el ancho de la ventana de combate */
+    max-width: 600px; /* Establece un ancho máximo para pantallas grandes */
+    padding: 0px;
+}
+
+.bloque-izquierdo, .bloque-derecho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%; /* Reduce el ancho de los bloques para que ocupen menos espacio */
+}
+
+.heroes button, .armas button, .enemigos button, .acciones-hero button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+#trascender-btn{
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: not-allowed;
+    background-color: #979797;
+    color: #252525;
+    border: none;
+    border-radius: 5px;
+}	
+
+#resultado-combate{
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 6em;
+    margin: 0;
+    text-shadow: 10px 10px 10px #8c09a0;
+}
+
+.heroes button:hover, .armas button:hover, .enemigos button:hover, .acciones-hero button:hover {
+    background-color: #0056b3;
+}
+
+
+.info-hero, .info-arma, .info-enemigo, .estadisticas-combate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    visibility: hidden; /* Ocultar inicialmente */
+}
+
+.imagen-hero, .imagen-arma, .imagen-enemigo {
+    width: 300px;
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.imagen-combate{
+    width: 150px; /* Reduce el tamaño de las imágenes */
+    height: 150px; /* Reduce el tamaño de las imágenes */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.detalles-hero, .detalles-arma, .detalles-enemigo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.descripcion-hero, .estadisticas-hero, .descripcion-arma, .estadisticas-arma, .descripcion-enemigo, .estadisticas-combate {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid #fff;
+    border-radius: 5px;
+    width: 300px;
+    text-align: left;
+}
+
+.estadisticas-combate{
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid #fff;
+    border-radius: 5px;
+    width: 150px; 
+    text-align: left;
+}
+
+#siguiente-btn, #arma-siguiente-btn, #enem-retroceder-btn, #enem-siguiente-btn, #retroceder-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+#siguiente-btn:hover, #arma-siguiente-btn:hover, #enem-retroceder-btn:hover, #enem-siguiente-btn:hover, #retroceder-btn:hover {
+    background-color: #218838;
+}
+
+.botones-navegacion {
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .info-hero, .info-arma, .info-enemigo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imagen-hero, .imagen-arma, .imagen-enemigo, .imagen-combate, .descripcion-hero, .estadisticas-hero, .descripcion-arma, .estadisticas-arma, .descripcion-enemigo {
+        width: 100%;
+        max-width: 300px;
+    }
+    .estadisticas-combate-hero, .estadisticas-combate-enemigo {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 150px;
+    }
+    .combate {
+        flex-direction: row; /* Mantiene la dirección del flex en fila para pantallas pequeñas */
+        align-items: center;
+        width: 100%; /* Ocupa el 100% del ancho disponible en pantallas pequeñas */
+    }
+
+    .bloque-izquierdo, .bloque-derecho {
+        width: 45%; /* Mantiene el ancho de los bloques para pantallas pequeñas */
+    }
+}
+
+.acciones-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+}
+
