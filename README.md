@@ -27,13 +27,27 @@ Cod5.
 
 Una combinancion de herencia y polimorfismo donde se usan los cod3 y cod4 unidos en uno solo pero con un apartado visual llamativo y recreao en un pequeño mini juego.
 
+Proyeto
+
+El proyecto final es una aplicacion web que tiene la funcionalidad de un carrito para llevar el control de los productos a comprar en un super mercado o tienda, lleva el control desde la cantidad, hasta el precio para llevar un total estimado a gastar en la compra.
 
 
 **FLUJO**
 
 ## POSIBLES MEJORAS
 
+Proyecto.
+
+-Un menu interactivo con mas funcionalidad.
+-Una funcion que muestre la lista a pantalla completa para que no se vea tan pequeño.
+-Responsividad.
+
+Todos los cod con interfaz.
+-Responsividad
+
 ## LO QUE CONTIENE EL REPOSITORIO
+
+El repositorio contiene los scripts de HTML, CSS Y JS para cada aplicacion web creada en el transcurso del curso de verano de POO.
 
 ### DESPLIEGUE
   - LINK: https://ghkenntole.github.io/examenfinalPOO/
