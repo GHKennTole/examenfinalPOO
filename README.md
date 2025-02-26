@@ -6,7 +6,8 @@
 
 ## FUNCIONALIDAD
 **DESCRIPCION**
--Cod1
+
+Cod1
 Ejemplo de POO brindado por el profesor.
 
 Cod2
