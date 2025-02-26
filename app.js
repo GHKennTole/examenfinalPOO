@@ -264,13 +264,13 @@ class Carrito {
             li.appendChild(spanPrecio);
             
             let botonEliminar = document.createElement("button");
-            botonEliminar.innerHTML = '<img src="Imagenes/iconos/Eliminar.png" alt="Eliminar">';
+            botonEliminar.innerHTML = '<img src="Imagenes/Iconos/Eliminar.png" alt="Eliminar">';
             botonEliminar.classList.add("boton-eliminar");
             botonEliminar.onclick = () => this.eliminar(index);
             li.appendChild(botonEliminar);
             
             let botonModificar = document.createElement("button");
-            botonModificar.innerHTML = '<img src="Imagenes/iconos/Editar.png" alt="Modificar">';
+            botonModificar.innerHTML = '<img src="Imagenes/Iconos/Editar.png" alt="Modificar">';
             botonModificar.classList.add("boton-modificar");
             botonModificar.onclick = () => this.modificar(index);
             li.appendChild(botonModificar);
